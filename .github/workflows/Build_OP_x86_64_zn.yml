@@ -82,7 +82,7 @@ jobs:
         git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
         git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
         git clone https://github.com/kenzok8/small.git package/small
-        git clone https://github.com/Lienol/openwrt-luci.git package/openwrt-luci
+        git clone https://github.com/Lienol/openwrt-luci/tree/21.02/libs/luci-lib-ipkg package/luci-lib-ipkg
         git clone https://github.com/Lienol/openwrt-package.git package/Lienol
         git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
         #git clone https://github.com/sirpdboy/sirpdboy-package package/sirpdboy-package
