@@ -82,12 +82,12 @@ jobs:
         git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
         git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
         git clone https://github.com/kenzok8/small.git package/small
-        git clone https://github.com/Lienol/openwrt-luci.git package/openwrt-luci
+        #git clone https://github.com/Lienol/openwrt-luci.git package/openwrt-luci
         git clone https://github.com/Lienol/openwrt-package.git package/Lienol
         git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
         #git clone https://github.com/sirpdboy/sirpdboy-package package/sirpdboy-package
         git clone https://github.com/LuttyYang/luci-theme-material.git package/luci-theme-material
-        git clone https://github.com/linkease/istore.git package/luci-app-store
+        #git clone https://github.com/linkease/istore.git package/luci-app-store
  
     - name: argon 主题
       working-directory: ./openwrt
