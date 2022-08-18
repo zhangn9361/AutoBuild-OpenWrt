@@ -100,13 +100,6 @@ jobs:
         cd package
         git clone https://github.com/destan19/OpenAppFilter.git 
  
-    - name: ipkg 安装
-      working-directory: ./openwrt
-      run: |
-        cd package/openwrt-packages
-        rm -rf luci-lib-ipkg
-        git clone https://github.com/Lienol/openwrt-luci/tree/21.02/libs/luci-lib-ipkg.gif
- 
     - name: 配置自定义架构
       env:
         CONFIG_FILE: 'x86_64_zn.config'
