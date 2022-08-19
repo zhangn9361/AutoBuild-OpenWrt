@@ -83,7 +83,6 @@ jobs:
         git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
         git clone https://github.com/kenzok8/small.git package/small
         #git clone https://github.com/Lienol/openwrt-luci.git package/openwrt-luci
-        git clone -b 21.02 git clone https://github.com/Lienol/openwrt-luci/libs/luci-lib-ipkg.gif package/luci-lib-ipkg
         git clone https://github.com/Lienol/openwrt-package.git package/Lienol
         git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
         #git clone https://github.com/sirpdboy/sirpdboy-package package/sirpdboy-package
@@ -99,8 +98,12 @@ jobs:
       working-directory: ./openwrt
       run: |
         cd package
-        git clone https://github.com/destan19/OpenAppFilter.git 
- 
+        git clone https://github.com/destan19/OpenAppFilter.git
+        
+    - name: ipkg
+      working-directory: ./openwrt
+      run: |
+        git clone -b 21.02 git clone https://github.com/Lienol/openwrt-luci/libs/luci-lib-ipkg.gif package/luci-lib-ipkg
     - name: 配置自定义架构
       env:
         CONFIG_FILE: 'x86_64_zn.config'
