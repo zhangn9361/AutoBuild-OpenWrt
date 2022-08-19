@@ -103,7 +103,7 @@ jobs:
     - name: ipkg
       working-directory: ./openwrt
       run: |
-        git clone -b 21.02 git clone https://github.com/Lienol/openwrt-luci/libs/luci-lib-ipkg.gif package/luci-lib-ipkg
+        git clone -b 21.02 git clone https://hub.fastgit.xyz/Lienol/openwrt-luci/libs/luci-lib-ipkg.gif package/luci-lib-ipkg
     - name: 配置自定义架构
       env:
         CONFIG_FILE: 'x86_64_zn.config'
