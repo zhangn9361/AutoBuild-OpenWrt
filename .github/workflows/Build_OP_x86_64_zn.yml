@@ -89,7 +89,7 @@ jobs:
         #git clone https://github.com/LuttyYang/luci-theme-material.git package/luci-theme-material
         #git clone https://github.com/linkease/istore.git package/luci-app-store
         #git clone https://github.com/281677160/openwrt-package.git package/openwrt-luci
-        #git clone git clone https://github.com/kiddin9/openwrt-packages.git package/openwrt-packages 
+        git clone git clone https://github.com/kiddin9/openwrt-packages.git package/openwrt-packages 
  
     - name: argon 主题
       working-directory: ./openwrt
