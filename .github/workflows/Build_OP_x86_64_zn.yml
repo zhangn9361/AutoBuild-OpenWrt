@@ -87,6 +87,7 @@ jobs:
         git clone https://github.com/sirpdboy/sirpdboy-package package/sirpdboy-package
         git clone https://github.com/LuttyYang/luci-theme-material.git package/luci-theme-material
         git clone https://github.com/linkease/istore.git package/istore
+        git clone https://github.com/topics/luci-lib-ipkg.git package/luci-lib-ipkg
  
     - name: argon 主题
       working-directory: ./openwrt
