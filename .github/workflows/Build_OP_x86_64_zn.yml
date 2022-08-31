@@ -96,7 +96,7 @@ jobs:
     - name: ipkg
       working-directory: ./openwrt
       run: |
-        git clone -b 21.02 https://github.com/Lienol/openwrt-luci/libs/luci-lib-ipkg.git package/luci-lib-ipkg
+        git clone https://github.com/Lienol/openwrt-luci/tree/21.02/libs/luci-lib-ipkg package/luci-lib-ipkg
 
     - name: AppFilter 安装
       working-directory: ./openwrt
