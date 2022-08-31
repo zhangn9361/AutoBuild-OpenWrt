@@ -87,13 +87,17 @@ jobs:
         git clone https://github.com/sirpdboy/sirpdboy-package package/sirpdboy-package
         git clone https://github.com/LuttyYang/luci-theme-material.git package/luci-theme-material
         git clone https://github.com/linkease/istore.git package/istore
-        git clone https://github.com/topics/luci-lib-ipkg.git package/luci-lib-ipkg
  
     - name: argon 主题
       working-directory: ./openwrt
       run: |
         git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-jerrykuku
-        
+ 
+    - name: ipkg
+      working-directory: ./openwrt
+      run: |
+        git clone -b 21.02 https://github.com/Lienol/openwrt-luci/libs/luci-lib-ipkg.git package/luci-lib-ipkg
+
     - name: AppFilter 安装
       working-directory: ./openwrt
       run: |
