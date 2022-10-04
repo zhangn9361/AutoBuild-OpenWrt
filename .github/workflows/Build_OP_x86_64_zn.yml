@@ -110,6 +110,21 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
+    - name：删除冗余文件
+       working-directory: ·/openwrt
+      run：|
+        cd bin/targets/*/*
+        rm -rf packages && mkdir packages
+        find -name "*feeds.buildinfo*" I xargs -i mv -f {} packages
+        find -name "*version.buildinfo*" I xargs -i mv -f {} packages
+        find -name "*sha256sums*" I xargs -i mv -f {} packages
+        find -name "*.manifest*" I xargs -i mv -f {} packages
+        find -name "*.bin*" I xargs -i mv -f {} packages
+        find -name "*.vmdk*" I xargs -i mv -f {} packages
+        find -name "*rootfs.img*" I xargs -i mv -f {} packages
+        find -name "*tar.gz*" I xargs -i mv -f {} packages
+        rm -rf packages
+
     - name: 构建固件
       working-directory: ./openwrt
       run: |
