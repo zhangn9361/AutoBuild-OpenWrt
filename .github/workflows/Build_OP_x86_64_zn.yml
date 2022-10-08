@@ -110,6 +110,12 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
+    - name: 构建固件
+      working-directory: ./openwrt
+      run: |
+        echo -e "$(nproc) thread build."
+        make -j$(nproc) V=s
+
     - name: 删除冗余文件
       working-directory: ./openwrt
       run: |
@@ -124,12 +130,6 @@ jobs:
         find -name "*rootfs.img*" I xargs -i mv -f {} packages
         find -name "*tar.gz*" I xargs -i mv -f {} packages
         rm -rf packages
-
-    - name: 构建固件
-      working-directory: ./openwrt
-      run: |
-        echo -e "$(nproc) thread build."
-        make -j$(nproc) V=s
 
     - name : 上传固件
       uses: actions/upload-artifact@master
