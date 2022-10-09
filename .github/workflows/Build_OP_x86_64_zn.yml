@@ -77,12 +77,13 @@ jobs:
     - name: 导入第三方插件
       working-directory: ./openwrt
       run: |
-        git clone https://github.com/AlexZhuo/luci-app-bandwidthd.git package/luci-app-bandwidthd
-        git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
-        git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
-        git clone https://github.com/kenzok8/small.git package/small
+        #git clone https://github.com/AlexZhuo/luci-app-bandwidthd.git package/luci-app-bandwidthd
+        #git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
+        #git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
+        #git clone https://github.com/kenzok8/small.git package/small
         git clone https://github.com/Lienol/openwrt-package.git package/Lienol
         git clone https://github.com/sirpdboy/sirpdboy-package package/sirpdboy-package
+        git clone https://github.com/kenzok8/jell.git package/openwrt-packages
  
     - name: argon 主题
       working-directory: ./openwrt
