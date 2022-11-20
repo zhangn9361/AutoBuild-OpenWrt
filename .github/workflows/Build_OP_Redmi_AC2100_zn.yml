@@ -78,25 +78,23 @@ jobs:
     - name: 导入第三方插件
       working-directory: ./openwrt
       run: |
+        git clone https://github.com/AlexZhuo/luci-app-bandwidthd.git package/luci-app-bandwidthd
         git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
-        git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
         git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
         git clone https://github.com/kenzok8/small.git package/small
-        git clone https://github.com/LuttyYang/luci-theme-material.git package/luci-theme-material
-
-    - name: adguardhome 安装
+        git clone https://github.com/Lienol/openwrt-package.git package/Lienol
+        git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy-package
+        #git clone https://github.com/kenzok8/jell.git package/openwrt-packages
+ 
+    - name: argon 主题
       working-directory: ./openwrt
       run: |
-        cd package/openwrt-packages
-        rm -rf luci-app-adguardhome
-        git clone https://github.com/rufengsuixing/luci-app-adguardhome.git   
-
-    - name: argon_new 主题
-      working-directory: ./openwrt
-      run: |
-        cd package/lean
-        rm -rf luci-theme-argon
-        git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git  
+        git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-jerrykuku
+    #- name: AppFilter 安装
+    #  working-directory: ./openwrt
+    #  run: |
+    #    cd package
+    #    git clone https://github.com/destan19/OpenAppFilter.git
         
     - name: 配置自定义架构
       env:
