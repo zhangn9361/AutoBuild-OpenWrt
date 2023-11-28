@@ -83,7 +83,7 @@ jobs:
         git clone https://github.com/kenzok8/small.git package/small
         git clone https://github.com/Lienol/openwrt-package.git package/Lienol
         git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy-package
-        git clone https://github.com/qi0026/luci-app-vssr.git package/luci-app-vssr
+        git clone https://github.com/uni-pai/luci-app-vssr.git package/luci-app-vssr
         git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
     - name: argon 主题
       working-directory: ./openwrt
