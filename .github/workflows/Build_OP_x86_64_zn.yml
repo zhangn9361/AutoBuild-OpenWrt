@@ -83,9 +83,9 @@ jobs:
         git clone https://github.com/kenzok8/small.git package/small
         git clone https://github.com/Lienol/openwrt-package.git package/Lienol
         git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy-package
-        git #clone https://github.com/uni-pai/luci-app-vssr.git package/luci-app-vssr
-        git #clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
-        git #clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
+        #git clone https://github.com/uni-pai/luci-app-vssr.git package/luci-app-vssr
+        #git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
+        #git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
         
     - name: argon 主题
       working-directory: ./openwrt
