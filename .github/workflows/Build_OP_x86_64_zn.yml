@@ -74,6 +74,7 @@ jobs:
         #git clone https://github.com/xiaorouji/openwrt-passwall.git package/lienol
         git clone https://github.com/Lienol/openwrt-package.git package/Lienol
         git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy-package
+        git clone https://github.com/immortalwrt/immortalwrt.git package/immortalwrt
         
     - name: argon 主题
       working-directory: ./openwrt
